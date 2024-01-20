@@ -57,23 +57,13 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'authentication.OurUser'
 
 REST_FRAMEWORK = {
-    
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+         'DEFAULT_PERMISSION_CLASSES': [
+            'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-     
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'DEFAULT_AUTHENTICATION_CLASSES': [
+            'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
-# REST_FRAMEWORK = {
-  
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-     
-#         'rest_framework_simplejwt.authentication.JWTAuthentication',
-#     )
-   
-# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
